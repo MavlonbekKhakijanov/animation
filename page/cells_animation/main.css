@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  border: 1px solid #000000;
+}
+.loader span {
+  width: 50px;
+  height: 50px;
+  background-color: #262626;
+  display: block;
+  float: left;
+  animation: animate 2s linear infinite;
+}
+.loader span:nth-child(5) {
+  animation-delay: 1.6s;
+}
+.loader span:nth-child(4),
+.loader span:nth-child(10) {
+  animation-delay: 1.4s;
+}
+.loader span:nth-child(3),
+.loader span:nth-child(9),
+.loader span:nth-child(15) {
+  animation-delay: 1.2s;
+}
+.loader span:nth-child(2),
+.loader span:nth-child(8),
+.loader span:nth-child(14),
+.loader span:nth-child(20) {
+  animation-delay: 1s;
+}
+.loader span:nth-child(1),
+.loader span:nth-child(7),
+.loader span:nth-child(13),
+.loader span:nth-child(19),
+.loader span:nth-child(25) {
+  animation-delay: 0.8s;
+}
+.loader span:nth-child(6),
+.loader span:nth-child(12),
+.loader span:nth-child(18),
+.loader span:nth-child(24) {
+  animation-delay: 0.6s;
+}
+.loader span:nth-child(11),
+.loader span:nth-child(17),
+.loader span:nth-child(23) {
+  animation-delay: 0.4s;
+}
+.loader span:nth-child(16),
+.loader span:nth-child(22) {
+  animation-delay: 0.2s;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.link {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  text-decoration: none;
+  color: #000;
+  font-size: 2rem;
+  &:hover {
+    color: red;
+  }
+}

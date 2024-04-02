@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: slategray;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  perspective: 600px;
+}
+.loader span {
+  position: absolute;
+  border: 10px solid #262626;
+  border-radius: 10px;
+}
+.loader span::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 10px;
+  height: 50%;
+  background-color: orangered;
+}
+.loader span::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 10px;
+  height: 50%;
+  background-color: orangered;
+}
+.loader span:nth-child(1) {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: anime 8s linear infinite;
+}
+.loader span:nth-child(2) {
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  animation: anime 4s linear infinite;
+}
+.loader span:nth-child(3) {
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  animation: anime 2s linear infinite;
+}
+@keyframes anime {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+.link {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  text-decoration: none;
+  color: #000;
+  font-size: 2rem;
+  &:hover {
+    color: red;
+  }
+}

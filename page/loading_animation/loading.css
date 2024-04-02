@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #182c35;
+}
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: 2.5px solid white;
+  border-radius: 20px;
+  width: 100px;
+  height: 100px;
+  animation: 5s box infinite linear;
+}
+.box::before {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: ball 5s infinite linear;
+}
+@keyframes ball {
+  0% {
+    transform: translateX(62px) translateY(62px);
+  }
+  25% {
+    transform: translateX(0) translateY(62px);
+  }
+  50% {
+    transform: translateX(0) translateY(0);
+  }
+  75% {
+    transform: translateX(62px) translateY(0);
+  }
+  100% {
+    transform: translateX(62px) translateY(62px);
+  }
+}
+@keyframes box {
+  0% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+}
+.link {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  text-decoration: none;
+  color: #000;
+  font-size: 2rem;
+  &:hover {
+    color: red;
+  }
+}
